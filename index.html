@@ -12,17 +12,41 @@
     />
   </head>
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     * {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: "Shadows Into Light", cursive;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar {
+      background: #DBA39A;
+    }
+
+    .btn {
+      background: linear-gradient(270deg, #FF884B 0%, #FF577F 100%);
+    }
+
+    .btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    .about {
+      background: #DBA39A;
+    }
+
+    .work {
+      background: #DBA39A;
+    }
+
+    .footer {
+      background: #DBA39A;
     }
   </style>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-light px-5">
+    <nav class="navbar navbar-expand-lg px-5">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">WebDev</a>
         <button
@@ -51,26 +75,26 @@
               <li class="nav-item">
                 <a class="nav-link" href="#works">PORTOFOLIO</a>
               </li>
-              <li class="nav-item">
-                <a class="btn btn-outline-danger nav-link" href="#"
-                  >CONTACT US</a
-                >
-              </li>
             </ul>
+            <form class="d-flex">
+              <div class="mb-1">
+                <button type="submit" class="btn btn-danger">CONTACT US</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- jumbotron -->
-    <section class="p-5 mb-5 bg-light" id="#home">
+    <section class="p-5 mb-5 home" id="#home">
       <div class="row">
         <div class="col-md-6 p-5 align-content-center">
           <h3 class="fs-4 pt-5">
             Develop amazing web and app experiences with tips and advice from
             the experts at Web.Dev.
           </h3>
-          <button class="btn btn-outline-dark">Go Detail</button>
+          <button class="btn btn-danger">Go Detail</button>
         </div>
 
         <div class="col-md-6">
@@ -80,7 +104,7 @@
     </section>
 
     <!-- about us -->
-    <section class="p-5 mb-5" id="about">
+    <section class="p-5 mb-5 about" id="about">
       <div class="text-center">
         <h1>ABOUT US</h1>
         <p style="padding-right: 25%; padding-left: 25%">
@@ -94,7 +118,7 @@
     </section>
 
     <!-- our services -->
-    <section class="p-5 mb-5" id="services">
+    <section class="p-5 mb-5 service" id="services">
       <div class="text-center">
         <h1>OUR SERVICES</h1>
         <div
@@ -176,14 +200,14 @@
     </section>
 
     <!-- our work -->
-    <section class="p-5 mb-5" id="works">
+    <section class="p-5 mb-5 work" id="works">
       <div class="text-center">
         <h1 class="mb-4">Our Works</h1>
         <div class="row">
           <div class="col-md-6">
-            <div class="justify-content-center" style="padding-top: 25%">
-              <h2>Porto 1</h2>
-              <h5>IOS | ANDROID | WEB DEV</h5>
+            <div class="justify-content-center" style="padding-top: 20%">
+              <h2>Best Car Service</h2>
+              <h6>IOS | ANDROID | WEB DEV</h6><br/>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Cupiditate iure dolorum ullam deserunt voluptates dicta unde
@@ -192,17 +216,17 @@
             </div>
           </div>
           <div class="col-md-6">
-            <img src="img/jmbtrn.png" alt="" class="img-fluid" />
+            <img src="img/gambar 1.png" alt="" class="img-fluid" style="padding-top: 10%" />
           </div>
         </div>
         <div class="row mb-2">
           <div class="col-md-6">
-            <img src="img/jmbtrn.png" alt="" class="img-fluid" />
+            <img src="img/gambar 2.png" alt="" class="img-fluid" style="padding-top: 15%" />
           </div>
           <div class="col-md-6">
             <div class="justify-content-center" style="padding-top: 25%">
-              <h2>Porto 1</h2>
-              <h5>IOS | ANDROID | WEB DEV</h5>
+              <h2>Miniatur Indonesia</h2>
+              <h6>IOS | ANDROID | WEB DEV</h6><br/>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Cupiditate iure dolorum ullam deserunt voluptates dicta unde
@@ -214,8 +238,8 @@
         <div class="row mb-2">
           <div class="col-md-6">
             <div class="justify-content-center" style="padding-top: 25%">
-              <h2>Porto 1</h2>
-              <h5>IOS | ANDROID | WEB DEV</h5>
+              <h2>Kaltim Travel</h2>
+              <h6>IOS | ANDROID | WEB DEV</h6><br/>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Cupiditate iure dolorum ullam deserunt voluptates dicta unde
@@ -224,7 +248,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <img src="img/jmbtrn.png" alt="" class="img-fluid" />
+            <img src="img/gambar 3.png" alt="" class="img-fluid" style="padding-top: 15%" />
           </div>
         </div>
       </div>
@@ -276,7 +300,7 @@
                 ></textarea>
               </div>
               <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-danger">Submit</button>
               </div>
             </form>
           </div>
@@ -285,7 +309,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="border-top p-3 text-center">
+    <footer class="border-top p-3 text-center footer">
         <span class="fw-bold">© 2022 kelompok stupen</span>
     </footer>
     <script
