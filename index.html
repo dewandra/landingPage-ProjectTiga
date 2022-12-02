@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Web.Dev.</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,11 +21,11 @@
     }
 
     .navbar {
-      background: #dba39a;
+      background: #150050;
     }
 
     .btn {
-      background: linear-gradient(270deg, #ff884b 0%, #ff577f 100%);
+      background: linear-gradient(270deg, #000000 0%, #3f0071 100%);
     }
 
     .btn:hover {
@@ -33,22 +33,53 @@
       color: #000;
     }
     .about {
-      background: #dba39a;
+      background: #150050;
     }
 
     .work {
-      background: #dba39a;
+      background: #150050;
     }
 
     .footer {
-      background: #dba39a;
+      background: #150050;
+    }
+    .carousel-inner {
+      padding: 1em;
+    }
+    .card {
+      margin: 0 0.5em;
+      box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+      border: none;
+    }
+    .card img {
+      width: 100px;
+      height: 250px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: #e1e1e1;
+      width: 6vh;
+      height: 6vh;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @media (min-width: 768px) {
+      .carousel-inner {
+        display: flex;
+      }
+      .carousel-item {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+      }
     }
   </style>
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg px-5">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">WebDev</a>
+        <a class="navbar-brand text-white" href="#">WebDev</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -64,19 +95,24 @@
           <div class="navbar navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#"
+                  >HOME</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">ABOUT</a>
+                <a class="nav-link text-white" href="#about">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#services">SERVICES</a>
+                <a class="nav-link text-white" href="#services">SERVICES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#works">PORTOFOLIO</a>
+                <a class="nav-link text-white" href="#works">PORTOFOLIO</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-danger">CONTACT US</a>
+                <a class="btn btn text-white border-white">CONTACT US</a>
               </li>
             </ul>
           </div>
@@ -88,11 +124,11 @@
     <section class="p-5 mb-5 home" id="#home">
       <div class="row">
         <div class="col-md-6 p-5 align-content-center">
-          <h3 class="fs-4 pt-5">
+          <h3 class="fw-bold fs-4 pt-5 mb-3">
             Develop amazing web and app experiences with tips and advice from
             the experts at Web.Dev.
           </h3>
-          <button class="btn btn-danger">Go Detail</button>
+          <button class="btn btn text-white border-white">Go Details</button>
         </div>
 
         <div class="col-md-6">
@@ -103,9 +139,9 @@
 
     <!-- about us -->
     <section class="p-5 mb-5 about" id="about">
-      <div class="text-center">
-        <h1>ABOUT US</h1>
-        <p style="padding-right: 25%; padding-left: 25%">
+      <div class="text-center text-white">
+        <h2 class="fw-bold">-- ABOUT US --</h2>
+        <p class="fw-light" style="padding-right: 25%; padding-left: 25%">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et officiis
           adipisci necessitatibus soluta expedita labore, omnis, consectetur
           quisquam harum magnam optio delectus deserunt vitae recusandae unde,
@@ -117,103 +153,112 @@
 
     <!-- our services -->
     <section class="p-5 mb-5 service" id="services">
-      <div class="text-center">
-        <h1>OUR SERVICES</h1>
-        <div
-          id="carouselExampleDark"
-          class="carousel carousel-dark slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="30000">
-              <img src="img/jmbtrn.png" class="w-50" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
+      <h2 class="fw-bold text-center">-- OUR SERVICES --</h2>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item text-center">
+            <div class="card">
+              <img src="img/card1.png" class="d-block w-100" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Company Profile</h5>
+                <p class="card-text">
+                  Recommended for businesses or companies that sell their
+                  products or services on a B2B basis
                 </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/jmbtrn.png" class="w-50" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/jmbtrn.png" class="w-50" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
+                <a href="#" class="btn btn text-white border-white"
+                  >Go Details</a
+                >
               </div>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <div class="carousel-item text-center">
+            <div class="card">
+              <img src="img/card4.png" class="d-block w-100" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Online Shop</h5>
+                <p class="card-text">
+                  Recommended for businesses or SMEs that sell goods or services
+                  directly to consumers
+                </p>
+                <a href="#" class="btn btn text-white border-white"
+                  >Go Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item text-center">
+            <div class="card">
+              <img src="img/card3.png" class="d-block w-100" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Wordpress</h5>
+                <p class="card-text">
+                  For: Companies, Schools, Universities, Hospitals, Health
+                  Centers, Clinics, Government Agencies, etc.
+                </p>
+                <a href="#" class="btn btn text-white border-white"
+                  >Go Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item text-center">
+            <div class="card">
+              <img src="img/card2.png" class="d-block w-100" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">S E O</h5>
+                <p class="card-text">
+                  With the right SEO strategy traffic will increase the website
+                  will be easier for potential buyers to find
+                </p>
+                <a href="#" class="btn btn text-white border-white"
+                  >Go Details</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
 
     <!-- our work -->
     <section class="p-5 mb-5 work" id="works">
-      <div class="text-center">
-        <h1 class="mb-4">Our Works</h1>
+      <div class="text-center text-white">
+        <h2 class="mb-4 fw-bold">-- Our Works --</h2>
         <div class="row">
           <div class="col-md-6">
             <div class="mt-5">
-              <h2>Best Car Service</h2>
-              <h6>IOS | ANDROID | WEB DEV</h6>
-              <p class="mt-4">
+              <h3 class="fw-bold">Best Car Service</h3>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-light">
                 Make a car checkup in your Service By joining BestCarService
                 member, you can easily book services only through...
               </p>
               <a
                 href="https://endearing-strudel-78f95f.netlify.app/"
                 target="_blank"
-                class="btn btn-primary"
+                class="btn btn text-white border-white"
                 >Go Details</a
               >
             </div>
@@ -228,18 +273,16 @@
           </div>
           <div class="col-md-6">
             <div class="mt-5">
-              <h2>Miniatur Indonesia</h2>
-              <h6>IOS | ANDROID | WEB DEV</h6>
-              <p class="mt-4">
+              <h3 class="fw-bold">Miniatur Indonesia</h3>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-lighter">
                 MI.ID Miniatur Indonesia selain menyediakan jasa pembuatan
-                miniatur, kami juga menyediakan platform untuk para seniman
-                miniatur menjualkan produk mereka disini.
+                miniatur, kami juga menyediakan platform...
               </p>
-
               <a
                 href="https://bucolic-syrniki-8b4bad.netlify.app/"
                 target="_blank"
-                class="btn btn-primary"
+                class="btn btn text-white border-white"
                 >Go Details</a
               >
             </div>
@@ -248,14 +291,19 @@
         <div class="row mt-5">
           <div class="col-md-6">
             <div class="mt-5">
-              <h2>Kaltim Travel</h2>
-              <h6>IOS | ANDROID | WEB DEV</h6>
-              <p class="mt-4">
+              <h3 class="fw-bold">Kaltim Travel</h3>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-lighter">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Cupiditate iure dolorum ullam deserunt voluptates dicta unde
                 consequatur, odio a temporibus!
               </p>
-              <a href="#" target="_blank" class="btn btn-primary">Go Details</a>
+              <a
+                href="#"
+                target="_blank"
+                class="btn btn text-white border-white"
+                >Go Details</a
+              >
             </div>
           </div>
           <div class="col-md-6">
@@ -269,11 +317,14 @@
     <section class="p-5 mb-5" id="contact">
       <div class="align-items-center">
         <div class="row">
-          <div class="col-md-6">
-            <h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              facilis aspernatur quia possimus maiores
+          <div class="col-md-6 text-center">
+            <h1 class="fw-bold fs-1" style="color: #150050; margin-top: 15%">
+              We'd Love to Hear From You
             </h1>
+            <h5 class="fw-lighter text-black-50">
+              Whether you're curious about features, a free trial, or even
+              press-were ready to answer any and all questions.
+            </h5>
           </div>
 
           <div class="col-md-6">
@@ -311,7 +362,9 @@
                 ></textarea>
               </div>
               <div class="mb-3">
-                <button type="submit" class="btn btn-danger">Submit</button>
+                <button type="submit" class="btn btn text-white border-white">
+                  Send
+                </button>
               </div>
             </form>
           </div>
@@ -321,13 +374,56 @@
 
     <!-- footer -->
     <footer class="border-top p-3 text-center footer">
-      <span class="fw-bold">© 2022 kelompok stupen</span>
+      <span class="fw-lighter text-white">© 2022 kelompok stupen</span>
     </footer>
 
+    <!-- BOoTSTRAP -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- JS -->
+    <script>
+      var multipleCardCarousel = document.querySelector(
+        "#carouselExampleControls"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+          interval: false,
+        });
+        var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+        var cardWidth = $(".carousel-item").width();
+        var scrollPosition = 0;
+        $("#carouselExampleControls .carousel-control-next").on(
+          "click",
+          function () {
+            if (scrollPosition < carouselWidth - cardWidth * 4) {
+              scrollPosition += cardWidth;
+              $("#carouselExampleControls .carousel-inner").animate(
+                { scrollLeft: scrollPosition },
+                600
+              );
+            }
+          }
+        );
+        $("#carouselExampleControls .carousel-control-prev").on(
+          "click",
+          function () {
+            if (scrollPosition > 0) {
+              scrollPosition -= cardWidth;
+              $("#carouselExampleControls .carousel-inner").animate(
+                { scrollLeft: scrollPosition },
+                600
+              );
+            }
+          }
+        );
+      } else {
+        $(multipleCardCarousel).addClass("slide");
+      }
+    </script>
   </body>
 </html>
