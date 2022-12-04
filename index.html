@@ -19,7 +19,6 @@
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
-
     .navbar {
       z-index: 3;
       background: #150050;
@@ -88,6 +87,26 @@
         display: block;
       }
     }
+    @media (min-width: 425px) {
+      .carousel-inner {
+        display: flex;
+      }
+      .img-responsive {
+        height: 50vh !important;
+        width: 65vh !important;
+      }
+      .carousel-item {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+      }
+      .card-body h5 {
+        font-size: 95%;
+      }
+      .card-text {
+        font-size: 70%;
+      }
+    }
   </style>
   <body>
     <!-- navbar -->
@@ -154,7 +173,7 @@
     <!-- about us -->
     <section class="p-5 mb-5 about" id="about">
       <div class="text-center text-white">
-        <h2 class="fw-bold mt-5">-- ABOUT US --</h2>
+        <h2 class="fw-bold mt-5">ABOUT US</h2>
         <p class="fw-light" style="padding-right: 25%; padding-left: 25%">
           Let's build the future of the web, together Take advantage of the
           latest modern technologies to build amazing web experiences for
@@ -165,7 +184,7 @@
 
     <!-- our services -->
     <section class="p-5 mb-5 service" id="services">
-      <h2 class="fw-bold text-center mt-5">-- OUR SERVICES --</h2>
+      <h2 class="fw-bold text-center mt-5">OUR SERVICES</h2>
       <div
         id="carouselExampleControls"
         class="carousel slide"
@@ -174,7 +193,11 @@
         <div class="carousel-inner">
           <div class="carousel-item text-center">
             <div class="card">
-              <img src="img/card1.png" class="d-block w-100" alt="..." />
+              <img
+                src="img/card1.png"
+                class="d-block w-100 img-responsive"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title fw-bold">Company Profile</h5>
                 <p class="card-text">
@@ -187,7 +210,11 @@
           </div>
           <div class="carousel-item text-center">
             <div class="card">
-              <img src="img/card4.png" class="d-block w-100" alt="..." />
+              <img
+                src="img/card4.png"
+                class="d-block w-100 img-responsive"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title fw-bold">Online Shop</h5>
                 <p class="card-text">
@@ -200,7 +227,11 @@
           </div>
           <div class="carousel-item text-center">
             <div class="card">
-              <img src="img/card3.png" class="d-block w-100" alt="..." />
+              <img
+                src="img/card3.png"
+                class="d-block w-100 img-responsive"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title fw-bold">Wordpress</h5>
                 <p class="card-text">
@@ -213,7 +244,11 @@
           </div>
           <div class="carousel-item text-center">
             <div class="card">
-              <img src="img/card2.png" class="d-block w-100" alt="..." />
+              <img
+                src="img/card2.png"
+                class="d-block w-100 img-responsive"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title fw-bold">S E O</h5>
                 <p class="card-text">
