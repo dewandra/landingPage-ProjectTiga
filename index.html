@@ -20,7 +20,7 @@
       font-family: "Poppins", sans-serif;
     }
     .navbar {
-      z-index: 3;
+      z-index: 999;
       background: #150050;
       color: gainsboro;
     }
@@ -40,21 +40,12 @@
     .nav-link:hover {
       color: #b6a2ea;
     }
-
-    .row {
-      margin-top: 110px;
-    }
-
-    .about {
+    .about{
       background: #150050;
     }
 
-    .work {
-      background: #150050;
-    }
-
-    .works {
-      margin-top: 15vh;
+    .works h1{
+      margin-top: 20%;
     }
 
     .work h3{
@@ -85,6 +76,25 @@
       top: 50%;
       transform: translateY(-50%);
     }
+    /* .serviceWork {
+      background: linear-gradient(to bottom, #fff 1%, #150050 99%);
+    } */
+    .serviceWork  {
+      position: relative;
+      z-index: 1;
+      background: #150050;
+      }
+
+      .serviceWork:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 88%;
+      left: 0;
+      background: #fff;
+}
     @media (min-width: 768px) {
       .carousel-inner {
         display: flex;
@@ -100,8 +110,8 @@
         display: flex;
       }
       .img-responsive {
-        height: 50vh !important;
-        width: 65vh !important;
+        height: 30vh !important;
+        width: 50vh !important;
       }
       .carousel-item {
         margin-right: 0;
@@ -115,12 +125,13 @@
         font-size: 70%;
       }
     }
+
   </style>
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg position-fixed w-100">
       <div class="container">
-        <a class="navbar-brand text-white" href="#">WebDev</a>
+        <a class="navbar-brand text-white" href="#"><img src="img/logo.png" alt="" style="width: 100px;height:30px"></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -162,7 +173,7 @@
     </nav>
 
     <!-- jumbotron -->
-    <section class="p-5 mb-5 home" id="#home">
+    <section class="p-5 mx-5 home" id="#home">
       <div class="row">
         <div class="col-md-6 p-5 align-content-center">
           <h3 class="fw-bold fs-4 pt-5 mb-3">
@@ -179,9 +190,9 @@
     </section>
 
     <!-- about us -->
-    <section class="p-5 mb-5 about" id="about">
+    <section class="p-5  mb-5 about" id="about">
       <div class="text-center text-white">
-        <h2 class="fw-bold mt-5">ABOUT US</h2>
+        <h2 class="fw-bold mt-2 mb-5">ABOUT US</h2>
         <p class="fw-light" style="padding-right: 25%; padding-left: 25%">
           Let's build the future of the web, together Take advantage of the
           latest modern technologies to build amazing web experiences for
@@ -191,8 +202,9 @@
     </section>
 
     <!-- our services -->
-    <section class="p-5 mb-5 service" id="services">
-      <h2 class="fw-bold text-center mt-5">OUR SERVICES</h2>
+    <section class="p-5 mb-5 serviceWork">
+    <div class="p-5 mb-5 service" id="services">
+      <h2 class="fw-bold text-center mt-2 mb-5">OUR SERVICES</h2>
       <div
         id="carouselExampleControls"
         class="carousel slide"
@@ -287,12 +299,12 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </section>
+    </div>
 
     <!-- our work -->
-    <section class="p-5 mb-5 work" id="works">
+    <div class="p-5 mb-5 work" id="works">
       <div class="text-center text-white">
-        <h2 class="mb-4 fw-bold mt-5"> Our Works </h2>
+        <h2 class="mb-4 fw-bold mt-2 mb-5"> Our Works </h2>
         <div class="row">
           <div class="col-md-6">
             <div class="works">
@@ -407,8 +419,7 @@
               <h1 class="fw-bold">Si Fuad</h1>
               <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
               <p class="mt-4 fw-lighter">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore magni 
-                numquam ab facere odit facilis quae quod dignissimos quaerat? Nemo quae...
+                Padukan gaya dan pengalamanmu di panggung kompetitif global. Kamu diberi 13 ronde untuk menyerang dan mempertahankan sisimu dengan ...
               </p>
               <a
                 href="#"
@@ -419,8 +430,9 @@
             </div>
           </div>
       </div>
-    </section>
-
+    </div>
+  </section>
+  
     <!-- contact -->
     <section class="p-5 mb-5" id="contact">
       <div class="align-items-center">
